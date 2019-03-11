@@ -34,7 +34,7 @@ docv = function(x,y,set,predfun,loss,nfold=10,doran=TRUE,verbose=TRUE,...)
   #shuffle the data
   nset = nrow(set); n=length(y) #get dimensions
   if(n==nfold) doran=FALSE #no need to shuffle if you are doing them all.
-  cat('in docv: nset,n,nfold: ',nset,n,nfold,'\n')
+  #cat('in docv: nset,n,nfold: ',nset,n,nfold,'\n')
   lossv = rep(0,nset) #return values
   if(doran) {ii = sample(1:n,n); y=y[ii]; x=x[ii,,drop=FALSE]} #shuffle rows
   
