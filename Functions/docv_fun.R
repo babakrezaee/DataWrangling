@@ -7,7 +7,7 @@
 ############################################################
 
 #--------------------------------------------------
-rmse=function(y,yhat) {return(sqrt(sum((y-yhat)^2)))}
+mse=function(y,yhat) {return(sum((y-yhat)^2))}
 
 
 doknn=function(x,y,xp,k) {
@@ -55,5 +55,5 @@ docv = function(x,y,set,predfun,loss,nfold=10,doran=TRUE,verbose=TRUE,...)
 #--------------------------------------------------
 #cv version for knn
 docvknn = function(x,y,k,nfold=10,doran=TRUE,verbose=TRUE) {
-  return(docv(x,y,matrix(k,ncol=1),doknn,rmse,nfold=nfold,doran=doran,verbose=verbose))
+  return(docv(x,y,matrix(k,ncol=1),doknn,mse,nfold=nfold,doran=doran,verbose=verbose))
 }
