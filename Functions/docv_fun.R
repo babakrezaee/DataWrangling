@@ -42,7 +42,7 @@ docv = function(x,y,set,predfun,loss,nfold=10,doran=TRUE,verbose=TRUE,...)
   fs = round(n/nfold) # fold size
   for(i in 1:nfold) { #fold loop
     bot=(i-1)*fs+1; top=ifelse(i==nfold,n,i*fs); ii =bot:top
-    if(verbose) cat('on fold: ',i,', range: ',bot,':',top,'\n')
+    #if(verbose) cat('on fold: ',i,', range: ',bot,':',top,'\n')
     xin = x[-ii,,drop=FALSE]; yin=y[-ii]; xout=x[ii,,drop=FALSE]; yout=y[ii]
     for(k in 1:nset) { #setting loop
       yhat = predfun(xin,yin,xout,set[k,],...)
