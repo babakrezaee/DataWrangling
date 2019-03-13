@@ -14,7 +14,7 @@ EucDis_fun<-function(DF,vec){
 }
 
 
-Kpoints <- function(DF, vec, k){
+KpointsMat_fun <- function(DF, vec, k){
   
   Euc_di=EucDis_fun(DF,vec)
   
