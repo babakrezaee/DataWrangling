@@ -1,29 +1,29 @@
 
 ## Fix some data-entry problems in the data and labels variables
 
-ReLabel_NAVCO2<-function(sample){
+ReLabel_NAVCO2<-function(data){
   
-  table(sample$BYear)
-  sample$BYear[sample$BYear == 2] <- 1
-  table(sample$BYear)
+  table(data$BYear)
+  sample$BYear[data$BYear == 2] <- 1
+  table(data$BYear)
   
-  sample$Status <- factor(sample$Status,
+  data$Status <- factor(data$Status,
                           levels = c(0,1),
                           labels = c("Ended", "Ongoing"))
   
-  sample$BYear <- factor(sample$BYear,
+  data$BYear <- factor(data$BYear,
                          levels = c(0,1),
                          labels = c("No", "Yes"))
   
-  sample$PrimMethod <-factor(sample$PrimMethod,
+  data$PrimMethod <-factor(data$PrimMethod,
                              levels=c(0,1),
                              labels=c("Violent","Nonviolent"))
   
-  sample$Unity <-factor(sample$Unity,
+  data$Unity <-factor(data$Unity,
                         levels=c(0,1,2,3,-99),
                         labels=c("United","Moderate disunity", "Competition", "Violent Competition","Unknown"))
   
-  sample$RadFlank <-factor(sample$RadFlank,
+  data$RadFlank <-factor(data$RadFlank,
                            levels=c(0,1,2,-99),
                            labels=c("Violent","No violent flank", "Violent flank", "Unknown"))
   
@@ -35,63 +35,63 @@ ReLabel_NAVCO2<-function(sample){
   #                              levels=c(0,1,2,3,-99),
   #                             labels=c("No violent flank", "Commited to nonviolence","Toleration of violence","Internal disagreement", "Unknown"))
   
-  sample$Goals <-factor(sample$Goals,
+  data$Goals <-factor(data$Goals,
                         levels=c(0,1,2,3,4,5,-99),
                         labels=c("Regime change","Institutional refomr","Policy change","Territorial secession",
                                  "Autonomy","Anti-occupation","Unknown"))
   
-  sample$GolasChange <- factor(sample$GolasChange,
+  data$GolasChange <- factor(data$GolasChange,
                                levels = c(0,1,-99),
                                labels = c("No change", "Shift", "Unknown"))
   
   
   
-  sample$Structure <- factor(sample$Structure,
+  data$Structure <- factor(data$Structure,
                              levels = c(0,1,-99),
                              labels = c("Consensus-based", "Hierarchical", "Unknown"))
   
   
-  sample$MediaOutreach <- factor(sample$MediaOutreach,
+  data$MediaOutreach <- factor(data$MediaOutreach,
                                  levels = c(0,1,-99),
                                  labels = c("No", "Yes", "Unknown"))
   
-  sample$Repression <- factor(sample$Repression,
+  data$Repression <- factor(data$Repression,
                               levels = c(0,1,2,3,-99),
                               labels = c("Non","Mild","Moderate","Extreme","Unknown"))
   
-  sample$RepressionDiscr <- factor(sample$RepressionDiscr,
+  data$RepressionDiscr <- factor(data$RepressionDiscr,
                                    levels = c(0,1,-99),
                                    labels = c("Discriminate", "Indiscriminate", "Unknown"))
   
-  sample$Backlash <- factor(sample$Backlash,
+  data$Backlash <- factor(data$Backlash,
                             levels = c(0,1,2,3,-99),
                             labels = c("No","Movement suppressed","Decreased mobilization","Increased mobilization", "Unknown"))
   
   
-  sample$SecDefection <- factor(sample$SecDefection,
+  data$SecDefection <- factor(data$SecDefection,
                                 levels = c(0,1,-99),
                                 labels = c("Yes", "No", "Unknown"))
   
   
-  sample$StateDefection <- factor(sample$StateDefection,
+  data$StateDefection <- factor(data$StateDefection,
                                   levels = c(0,1,-99),
                                   labels = c("No", "Yes", "Unknown"))
   
   
-  sample$IntSanction <- factor(sample$IntSanction,
+  data$IntSanction <- factor(data$IntSanction,
                                levels = c(0,1,-99),
                                labels = c("No", "Yes", "Unknown"))
   
-  sample$IntMedia <- factor(sample$IntMedia,
+  data$IntMedia <- factor(data$IntMedia,
                             levels = c(0,1,2,-99),
                             labels = c("Little to none","Moderate", "High", "Unknown"))
   
-  sample$DomMedia <- factor(sample$DomMedia,
+  data$DomMedia <- factor(data$DomMedia,
                             levels = c(0,1,2,-99),
                             labels = c("Little to none","Moderate", "High", "Unknown"))
   
   
-  sample$Progress <- factor(sample$Progress,
+  data$Progress <- factor(data$Progress,
                             levels = c(0,1,2,3,4,5,-99),
                             labels = c("Status quo","Visible gains","Limited concession", "Significant concession",
                                        "Complete success","Ends in failure","Unknown"))
