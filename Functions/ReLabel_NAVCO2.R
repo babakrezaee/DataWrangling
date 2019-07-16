@@ -1,10 +1,9 @@
 
 ## Fix some data-entry problems in the data and labels variables
 
-ReLabel_NAVCO2<-function(data){
-  
+
   table(data$BYear)
-  sample$BYear[data$BYear == 2] <- 1
+  data$BYear[data$BYear == 2] <- 1
   table(data$BYear)
   
   data$Status <- factor(data$Status,
@@ -27,11 +26,11 @@ ReLabel_NAVCO2<-function(data){
                            levels=c(0,1,2,-99),
                            labels=c("Violent","No violent flank", "Violent flank", "Unknown"))
   
-  #sample$RadFlankIntensity <-factor(sample$RadFlankIntensity,
+  #data$RadFlankIntensity <-factor(data$RadFlankIntensity,
   #                               levels=c(0,1,2,3,-99),
   #                               labels=c("No violent flank", "Property damage", "Non-lethal violence","Lethal violence","Unknown"))
   
-  #sample$RadFlankResponse <-factor(sample$RadFlankResponse,
+  #data$RadFlankResponse <-factor(data$RadFlankResponse,
   #                              levels=c(0,1,2,3,-99),
   #                             labels=c("No violent flank", "Commited to nonviolence","Toleration of violence","Internal disagreement", "Unknown"))
   
@@ -96,5 +95,4 @@ ReLabel_NAVCO2<-function(data){
                             labels = c("Status quo","Visible gains","Limited concession", "Significant concession",
                                        "Complete success","Ends in failure","Unknown"))
   
-  }
 
