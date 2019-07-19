@@ -40,7 +40,7 @@ xy_Violent1proc=cd[,c("Violent1","Population","RealGDPPC","Inflation","Democracy
 x_Violent1proc=model.matrix(Violent1~.,xy_Violent1proc)[,-1]
 y_violent1proc=as.factor(cd$Violent1)
 
-
+cd_violent1proc=data.frame(y_violent1proc,x_Violent1proc)
 #
 
 #fma_Violent1D=as.formula(as.factor(Violent1) ~ Conflict+Population+RealGDPPC+Inflation+Democracy+Ethnic_ELF+Religious_ELF+theta_mean)
@@ -49,12 +49,16 @@ xy_Violent1D=cd[,c("Violent1","Conflict","Population","RealGDPPC","Inflation","D
 x_Violent1D=model.matrix(Violent1~.,xy_Violent1)[,-1]
 y_violent1D=as.factor(cd$Violent1)
 
+cd_violent1D=data.frame(y_violent1D,x_Violent1D)
+
 #
 
 xy_Conflict1=cd[,c("Conflict1","Population","RealGDPPC","Inflation","Democracy","Ethnic_ELF","Religious_ELF","theta_mean")]
 
 x_Conflict1=model.matrix(Conflict1~.,xy_Conflict1)[,-1]
 y_Conflict1=as.factor(cd$Conflict1)
+
+cd_Conflict1=data.frame(y_Conflict1,x_Conflict1)
 
 #
 
@@ -66,6 +70,7 @@ xy_Conflict1proc=cd[,c("Conflict1","Population","RealGDPPC","Inflation","Democra
 x_Conflict1proc=model.matrix(Conflict1~.,xy_Conflict1proc)[,-1]
 y_Conflict1proc=as.factor(cd$Conflict1)
 
+cd_Conflict1proc=data.frame(y_Conflict1proc,x_Conflict1proc)
 #
 
 xy_Conflict1D=cd[,c("Conflict1","Conflict","Population","RealGDPPC","Inflation","Democracy","Ethnic_ELF","Religious_ELF","theta_mean")]
@@ -73,3 +78,4 @@ xy_Conflict1D=cd[,c("Conflict1","Conflict","Population","RealGDPPC","Inflation",
 x_Conflict1D=model.matrix(Conflict1~.,xy_Conflict1D)[,-1]
 y_Conflict1D=as.factor(cd$Conflict1)
 
+cd_Conflict1D=data.frame(y_Conflict1D,x_Conflict1D)
