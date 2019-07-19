@@ -3,7 +3,7 @@
 #Preparing the matrix version of below formulas.
 ## Version: 07192019
 
-
+print("
 #fma_Violent1=as.formula(as.factor(Violent1) ~ Population+RealGDPPC+Inflation+Democracy+Ethnic_ELF+Religious_ELF+theta_mean)
 
 #fma_Violent1proc=as.formula(as.factor(Violent1) ~ Population+RealGDPPC+Inflation+Democracy+Ethnic_ELF+Religious_ELF+theta_mean+
@@ -22,7 +22,7 @@
 #  UnconMassViol)
 
 #fma_Conflict1D=as.formula(as.factor(Conflict1) ~ Conflict+Population+RealGDPPC+Inflation+Democracy+Ethnic_ELF+Religious_ELF+theta_mean+CCode)
-
+")
 
 xy_Violent1=cd[,c("Violent1","Population","RealGDPPC","Inflation","Democracy","Ethnic_ELF","Religious_ELF","theta_mean")]
 
