@@ -26,9 +26,9 @@ print("fma_Violent1; fma_Violent1proc; fma_Violent1D; fma_Conflict1; fma_Conflic
 xy_Violent1=cd[,c("Violent1","Population","RealGDPPC","Inflation","Democracy","Ethnic_ELF","Religious_ELF","theta_mean")]
 
 x_Violent1=model.matrix(Violent1~.,xy_Violent1)[,-1]
-violent1=as.factor(cd$Violent1)
+Violent1=as.factor(cd$Violent1)
 
-cd_violent1=data.frame(violent1,x_Violent1)
+cd_Violent1=data.frame(Violent1,x_Violent1)
 
 #
 
@@ -39,7 +39,7 @@ xy_Violent1proc=cd[,c("Violent1","Population","RealGDPPC","Inflation","Democracy
 
 x_Violent1proc=model.matrix(Violent1~.,xy_Violent1proc)[,-1]
 
-cd_violent1proc=data.frame(violent1,x_Violent1proc)
+cd_violent1proc=data.frame(Violent1,x_Violent1proc)
 #
 
 #fma_Violent1D=as.formula(as.factor(Violent1) ~ Conflict+Population+RealGDPPC+Inflation+Democracy+Ethnic_ELF+Religious_ELF+theta_mean)
@@ -47,7 +47,7 @@ xy_Violent1D=cd[,c("Violent1","Conflict","Population","RealGDPPC","Inflation","D
 
 x_Violent1D=model.matrix(Violent1~.,xy_Violent1)[,-1]
 
-cd_violent1D=data.frame(violent1,x_Violent1D)
+cd_violent1D=data.frame(Violent1,x_Violent1D)
 
 #
 
